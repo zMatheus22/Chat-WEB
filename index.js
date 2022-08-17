@@ -15,9 +15,12 @@ const messages = [];
 const io = socketIO(server);
 
 io.on("connection", (socket) => {
+  //Alguem efetuou uma conection no server.
   console.log("New Connection");
+  //Server Envia a menssagem
   socket.emit("update_messages", messages);
 
+  //Back end envia o "data" para o Front end, neste caso o front end só utiliza o "user" e "messagem"
   socket.on("new_message", (data) => {
     messages.push(data);
 

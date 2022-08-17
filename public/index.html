@@ -23,12 +23,13 @@
     <link rel="shortcut icon" href="/icon/chat-dots.svg" type="image/x-icon" />
     <title>Chat</title>
   </head>
-  <body class="p-3 m-0 border-0">
-    <div class="container">
+  <body class="p-3 m-0 border-0 bg-dark bg-opacity-50">
+    <div class="container fw-bold text-white text-center">
       <form class="form d-flex" name="user_form_name" id="user_form">
-        <div class="d-inline-flex mx-auto input-group">
+        <div class="d-inline-flex input-group">
+          <label for="user_label" class="from-label m-2 mx-3">User</label>
           <input
-            class="form-control"
+            class="rounded-3 form-control mx-auto p-0 bg-dark text-white"
             name="user"
             id="user_input"
             type="text"
@@ -38,18 +39,22 @@
             maxlength="20"
             size="10"
           />
-          <button class="btn btn-info" type="submit">Definir</button>
+          <button class="btn btn-info rounded-2 mx-3" type="submit">
+            Definir
+          </button>
         </div>
       </form>
 
-      <div id="messages">
-        
-      </div>
+      <div
+        class="mt-1 border border-dark border-2 rounded-3 bg-dark text-white text-start"
+        id="messages"
+      ></div>
 
       <form class="form d-flex" name="message_form_name" id="message_form">
         <div class="d-inline-flex mx-auto input-group mt-2 mb-2">
+          <label for="user_label" class="from-label m-2 mx-1">Mensagem</label>
           <input
-            class="form-control"
+            class="rounded-3 form-control mx-auto p-0 bg-dark text-white"
             name="msg"
             id="message_input"
             type="text"
@@ -58,7 +63,9 @@
             maxlength="250"
             size="10"
           />
-          <button class="btn btn-success" type="submit">Enviar</button>
+          <button class="btn btn-success rounded-2 mx-2" type="submit">
+            Enviar
+          </button>
         </div>
       </form>
     </div>
